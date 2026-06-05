@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meteor Avcısı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-panel" aria-label="Meteor Avcısı oyunu">
+      <header class="top-bar">
+        <div class="title-block">
+          <p class="eyebrow">Arcade Space Shooter</p>
+          <h1>Meteor Avcısı</h1>
+        </div>
+        <div class="stats" aria-label="Oyun bilgileri">
+          <div>
+            <span>Skor</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>Can</span>
+            <strong id="lives">3</strong>
+          </div>
+          <div>
+            <span>Seviye</span>
+            <strong id="level">1</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Meteor Avcısı oyun alanı"></canvas>
+        <div class="overlay" id="overlay">
+          <p class="overlay-kicker">Yeni görev hazır</p>
+          <h2 id="overlayTitle">Meteor Avcısı</h2>
+          <p id="overlayText">Meteorlara ateş et, yıldızları topla ve gemini hayatta tut.</p>
+          <button class="primary-button" id="startButton" type="button">Oyunu Başlat</button>
+        </div>
+      </div>
+
+      <footer class="control-bar" aria-label="Oyun kontrolleri">
+        <button class="control-button" id="leftButton" type="button" aria-label="Sola git">←</button>
+        <button class="control-button fire" id="fireButton" type="button" aria-label="Ateş et">Ateş</button>
+        <button class="control-button pause" id="pauseButton" type="button" aria-label="Duraklat">II</button>
+        <button class="control-button" id="rightButton" type="button" aria-label="Sağa git">→</button>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

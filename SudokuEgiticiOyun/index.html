@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Eğitici Oyun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Mantık ve Dikkat Oyunu</p>
+        <h1>Sudoku Eğitici Oyun</h1>
+        <p>Satır, sütun ve 3x3 kutularda aynı rakamı tekrar etmeden tabloyu tamamla.</p>
+      </div>
+      <div class="score-panel" aria-label="Oyun bilgileri">
+        <div>
+          <span>Süre</span>
+          <strong id="timer">00:00</strong>
+        </div>
+        <div>
+          <span>Hata</span>
+          <strong id="mistakes">0</strong>
+        </div>
+        <div>
+          <span>İpucu</span>
+          <strong id="hints">3</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-layout">
+      <aside class="side-panel">
+        <div class="panel-section">
+          <h2>Zorluk</h2>
+          <div class="difficulty-tabs" role="group" aria-label="Zorluk seviyesi seçimi">
+            <button class="difficulty active" data-level="easy" type="button">Kolay</button>
+            <button class="difficulty" data-level="medium" type="button">Orta</button>
+            <button class="difficulty" data-level="hard" type="button">Zor</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2>Öğretici Bilgi</h2>
+          <p id="lessonText">Bir hücre seç. Aynı satır, sütun ve kutudaki rakamları kontrol ederek doğru sayıyı bul.</p>
+        </div>
+
+        <div class="panel-section rule-list">
+          <h2>Kurallar</h2>
+          <p>Her satırda 1-9 arası rakamlar birer kez olmalı.</p>
+          <p>Her sütunda aynı rakam tekrar etmemeli.</p>
+          <p>Her 3x3 kutu 1-9 rakamlarıyla tamamlanmalı.</p>
+        </div>
+      </aside>
+
+      <section class="board-area" aria-label="Sudoku oyun alanı">
+        <div class="board-toolbar">
+          <button id="newGameButton" type="button">Yeni Oyun</button>
+          <button id="checkButton" type="button">Kontrol Et</button>
+          <button id="hintButton" type="button">İpucu Al</button>
+        </div>
+
+        <div class="board" id="board" aria-label="Sudoku tahtası"></div>
+
+        <div class="number-pad" aria-label="Rakam seçimi">
+          <button type="button" data-number="1">1</button>
+          <button type="button" data-number="2">2</button>
+          <button type="button" data-number="3">3</button>
+          <button type="button" data-number="4">4</button>
+          <button type="button" data-number="5">5</button>
+          <button type="button" data-number="6">6</button>
+          <button type="button" data-number="7">7</button>
+          <button type="button" data-number="8">8</button>
+          <button type="button" data-number="9">9</button>
+          <button type="button" data-number="0">Sil</button>
+        </div>
+
+        <p class="status" id="status" role="status">Kolay seviye hazır. Bir hücre seçerek başlayabilirsin.</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
